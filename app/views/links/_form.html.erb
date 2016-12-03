@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="jumbotron jumbotron-new">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2><%= action %> Link</h2>
+          </div>
+          <div class="panel-body">
+            <%= form_for(@link) do |link| %>
+            
+              <% if @link.errors.any? %>
+                <div class="error_explanation">
+                  <h2><%= pluralize(@link.errors.count, "error")%> won´t let this link to being saved:</h2>
+                  
+                  <ul>
+                    <% @link.errors.full_messages.each do |message| %>
+                      <li class="danger"><%= message %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+              
+              <div class="row">
+                <div class="col-md-12">
+                  <div class= "form-group">
+                    <%= link.label :title %>
+                    <%= link.text_field :title, class: 'form-control' %>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <%= link.label :description %>
+                    <%= link.text_area :description, rows: "6", class: 'form-control' %>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <%= link.label :link %>
+                    <%= link.text_area :link, rows: "6", class: 'form-control' %>
+                  </div>
+                </div>
+              </div>
+              <div class="actions act-new">
+                <%= link_to raw('<span class="glyphicon glyphicon-remove"></span> Cancel'), links_path, class: 'btn btn-danger btn-large' %>
+                <%= button_tag(type: "submit", class: "btn btn-success btn-large", name: "Save link", value: "Save Link") do %>
+                  <span class="glyphicon glyphicon-ok"></span> Save link
+                <% end %> 
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

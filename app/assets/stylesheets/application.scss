@@ -1,0 +1,169 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+body{
+    height: 100%;
+}
+.span-or {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -16px;
+    margin-left: -25px;
+    /* background-color: #fff; */
+    background-color: transparent;
+    color: #505050;
+    font-weight: bold;
+    width: 50px;
+    text-align: center;
+}
+.hr-or {
+    background-color: #cdcdcd;
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+.login-or {
+    position: relative;
+    font-size: 18px;
+    color: #aaa;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.btn-fb {
+    color: #fff;
+    background-color: #3b5998;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 60%;
+    font-weight: bold;
+}
+.btn-fb:hover {
+    color: #fff;
+    background-color: #496ebc;
+}
+.btn-new-link{
+	background-color: transparent;
+	color: green;
+	border-color: green;
+	border: 2pt solid;
+}
+body{
+    font-family: 'Roboto';
+    /* The image used */
+    background-image: image-url("firewatch-game-min.jpg");
+    
+
+    /* Full height */
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.jumbotron.jumbotron-log {
+    background-color: rgba(238, 238, 238, 0.35);
+    width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+.actions {
+    display: inline-block;
+    width: 80px;
+}
+.actions input{
+    width: 100%;
+    font-weight: bold;
+    color:white;
+}
+.form-group{
+    position: relative;
+}
+.remember-me-check{
+    width: 150px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    text-align: right;
+}
+.forgot-link{
+    color:#171616;
+    font-weight: bold;
+}
+.forgot-link:hover{
+    color:white;
+}
+.actions.middle-btn{
+    display: block;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar{
+    margin-bottom: 0px;
+    background-color: rgba(231,231,231,0.9);
+}
+.container-links{
+    margin-top: 60px;
+}
+h1{
+    font-size: 36px;
+    color: #211023;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.navbar a{
+    color: #211023;
+}
+a.navbar-brand{
+    font-weight: bold;
+}
+.navbar-text a{
+    font-weight: bold;
+}
+.panel-danger{
+    background-color: transparent;
+}
+.panel-danger > .panel-heading{
+    background-color:rgba(242,222,222,0.9);
+}
+.panel-danger > .panel-body{
+    background-color:rgba(255,255,255,0.9);
+}
+
+.panel-danger >.panel-footer{
+    background-color:rgba(245,245,245,0.9);
+}
+.jumbotron.jumbotron-new {
+    background-color: rgba(238, 238, 238, 0.35);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 500px;
+    padding: 15px;
+}
+.btn-inline{
+    display: inline;
+}
+.act-new{
+    width: 100%;
+}
