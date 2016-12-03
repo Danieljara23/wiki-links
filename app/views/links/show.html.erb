@@ -9,6 +9,46 @@
       <p><strong>Title</strong> <%= @link.title %></p>
       <p><strong>Description:</strong> <%= @link.description %></p>
       <p><strong>Link:</strong><%= @link.link %></p>
+              <div>
+                <% if user_signed_in?%>
+                    <%= form_for @comment do |comment| %>
+
+                      <% if @comment.errors.any? %>
+                        <div class="error_explanation">
+                          <h4><%= pluralize(@comment.errors.count, "error")%> won´t let this comment to being saved:</h4>
+
+                          <ul>
+                            <% @comment.errors.full_messages.each do |message| %>
+                              <li class="danger"><%= message %></li>
+                            <% end %>
+                          </ul>
+                        </div>
+                      <% end %>
+
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class= "form-group">
+                            <%= comment.label :content %>
+                            <%= comment.text_area :content, class: 'form-control' %>
+                          </div>
+                        </div>
+                        <%= comment.hidden_field :commentable_id, :value => @link.id%>
+                        <%= comment.hidden_field :commentable_type, :value => "Post"%>
+
+                        <div class="actions">
+                          <%= button_tag(type: "submit", class: "btn btn-success btn-large", name: "Save Comment", value: "Save comment") do %>
+                          <span class="glyphicon glyphicon-ok"></span> Save comment
+                          <% end %>
+                        </div>
+                      </div>
+                    <% end %>
+                <% end %>
+
+                <% @comments.each do |comment| %>
+                  <p class="text-justify"><%= comment.content %></p>
+                  <p><%= comment.user.email %></p>
+                <% end %>
+              </div>
     </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :links, :has_many => :comments
-
+  resources :comments
   root 'links#index'
 
   devise_for :users,controllers:{ omniauth_callbacks: "users/omniauth_callbacks" }

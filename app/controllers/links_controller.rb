@@ -16,11 +16,13 @@ class LinksController < ApplicationController
   end
 
   def show
+    find_comments
+    @comment = Comment.new
   	@action = params[:it_was]
   end
 
   def index
-  	@links = Link.all 	
+  	@links = Link.all	
   end
 
   private
@@ -31,5 +33,9 @@ class LinksController < ApplicationController
 
   def find_link
     @link = Link.find(params[:id])
+  end
+  
+  def find_comments
+    @comments = Comment.where(commentable_id: params[:id])
   end
 end
